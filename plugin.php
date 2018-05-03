@@ -1,10 +1,10 @@
 <?php
 /*
 Plugin Name: Alchemists Color Filters for WooCommerce
-Plugin URI: https://www.etoilwebdesign.com/plugins/color-filters/
+Plugin URI: https://github.com/danfisher85/alc-color-filters
 Description: Filter WooCommerce products by color from a sidebar widget.
-Author: Etoile Web Design
-Author URI: https://themeforest.net/user/dan_fisher
+Author: Dan Fisher
+Author URI: https://github.com/danfisher85/alc-color-filters
 Version: 1.0.0
 */
 
