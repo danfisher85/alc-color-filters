@@ -36,7 +36,7 @@ if ( ! class_exists( 'NM_Color_Filters' ) ) {
 			*/
 		function notice_no_woocommerce() {
 		?>
-					<div class="message error"><p><?php printf( __( 'Color Filters by <a href="%s" target="_blank">Elementous</a> is enabled but not effective. It requires <a href="%s" target="_blank">WooCommerce</a> plugin in order to work.', 'elm' ), 'https://www.elementous.com', 'http://www.woothemes.com/woocommerce/' ); ?></p></div>
+					<div class="message error"><p><?php printf( __( 'Color Filters by <a href="%s" target="_blank">Elementous</a> is enabled but not effective. It requires <a href="%s" target="_blank">WooCommerce</a> plugin in order to work.', 'alc-color-filters' ), 'https://www.elementous.com', 'http://www.woothemes.com/woocommerce/' ); ?></p></div>
 			<?php
 		}
 
@@ -218,17 +218,17 @@ if ( ! class_exists( 'NM_Color_Filters' ) ) {
 		 */
 		function register_taxonomy() {
 			$labels = array(
-				'name'              => _x( 'Colors', 'Color', 'elm' ),
-				'singular_name'     => _x( 'Color', 'Color', 'elm' ),
-				'search_items'      => __( 'Search Colors', 'elm' ),
-				'all_items'         => __( 'All Colors', 'elm' ),
-				'parent_item'       => __( 'Parent Color', 'elm' ),
-				'parent_item_colon' => __( 'Parent Color:', 'elm' ),
-				'edit_item'         => __( 'Edit Color', 'elm' ),
-				'update_item'       => __( 'Update Color', 'elm' ),
-				'add_new_item'      => __( 'Add New Color', 'elm' ),
-				'new_item_name'     => __( 'New Color Name', 'elm' ),
-				'menu_name'         => __( 'Colors', 'elm' ),
+				'name'              => _x( 'Colors', 'Color', 'alc-color-filters' ),
+				'singular_name'     => _x( 'Color', 'Color', 'alc-color-filters' ),
+				'search_items'      => __( 'Search Colors', 'alc-color-filters' ),
+				'all_items'         => __( 'All Colors', 'alc-color-filters' ),
+				'parent_item'       => __( 'Parent Color', 'alc-color-filters' ),
+				'parent_item_colon' => __( 'Parent Color:', 'alc-color-filters' ),
+				'edit_item'         => __( 'Edit Color', 'alc-color-filters' ),
+				'update_item'       => __( 'Update Color', 'alc-color-filters' ),
+				'add_new_item'      => __( 'Add New Color', 'alc-color-filters' ),
+				'new_item_name'     => __( 'New Color Name', 'alc-color-filters' ),
+				'menu_name'         => __( 'Colors', 'alc-color-filters' ),
 			);
 		
 			$args = array(

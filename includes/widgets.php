@@ -14,8 +14,8 @@ if ( ! class_exists( 'NM_Color_Filters_Widget' ) ) {
 		function __construct() {
 			parent::__construct(
 				'nm_color_filters', // Base ID
-				__('WooCommerce Color Filters', 'elm'), // Name
-				array( 'description' => __( 'WooCommerce product color filters.', 'elm' ), ) // Args
+				__('WooCommerce Color Filters', 'alc-color-filters'), // Name
+				array( 'description' => __( 'WooCommerce product color filters.', 'alc-color-filters' ), ) // Args
 			);
 		}
 
@@ -125,7 +125,7 @@ if ( ! class_exists( 'NM_Color_Filters_Widget' ) ) {
 			if ( isset( $instance[ 'title' ] ) ) {
 				$title = $instance[ 'title' ];
 			} else {
-				$title = __( 'Color Filters', 'elm' );
+				$title = __( 'Color Filters', 'alc-color-filters' );
 			}
 			
 			?>
@@ -138,7 +138,7 @@ if ( ! class_exists( 'NM_Color_Filters_Widget' ) ) {
 			<label for="<?php echo $this->get_field_id( 'Layout' ); ?>"><?php _e( 'Layout:' ); ?></label><br />
 			<select id="<?php echo $this->get_field_id( 'layout' ); ?>" name="<?php echo $this->get_field_name( 'layout' ); ?>" class="widefat">
 			<?php
-			$options = array( 'color_and_text' => __('Color and text', 'elm'), 'color' => __('Color', 'elm'), 'text' => __('Text', 'elm') );
+			$options = array( 'color_and_text' => __('Color and text', 'alc-color-filters'), 'color' => __('Color', 'alc-color-filters'), 'text' => __('Text', 'alc-color-filters') );
 					
 			foreach ( $options as $key => $value ) :
 				$selected = ( $instance[ 'layout' ] == $key ) ? 'selected' : '';
@@ -151,12 +151,12 @@ if ( ! class_exists( 'NM_Color_Filters_Widget' ) ) {
 			
 			<p>
 			<input id="<?php echo $this->get_field_id( 'hide_empty' ); ?>" name="<?php echo $this->get_field_name( 'hide_empty' ); ?>" type="checkbox" value="1" <?php checked( 1, @$instance[ 'hide_empty' ] ); ?> />
-			<label for="<?php echo $this->get_field_id( 'hide_empty' ); ?>"><?php _e( 'Hide empty', 'elm' ); ?></label>
+			<label for="<?php echo $this->get_field_id( 'hide_empty' ); ?>"><?php _e( 'Hide empty', 'alc-color-filters' ); ?></label>
 			</p>
 			
 			<p>
 			<input id="<?php echo $this->get_field_id( 'product_count' ); ?>" name="<?php echo $this->get_field_name( 'product_count' ); ?>" type="checkbox" value="1" <?php checked( 1, @$instance[ 'product_count' ] ); ?> />
-			<label for="<?php echo $this->get_field_id( 'product_count' ); ?>"><?php _e( 'Include the number of assigned products', 'elm' ); ?></label>
+			<label for="<?php echo $this->get_field_id( 'product_count' ); ?>"><?php _e( 'Include the number of assigned products', 'alc-color-filters' ); ?></label>
 			</p>
 			
 			<?php 
