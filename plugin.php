@@ -5,12 +5,12 @@ Plugin URI: https://github.com/danfisher85/alc-color-filters
 Description: Filter WooCommerce products by color from a sidebar widget.
 Author: Dan Fisher
 Author URI: https://github.com/danfisher85/alc-color-filters
-Version: 1.0.0
+Version: 1.0.1
 Text Domain: alc-color-filters
 Domain Path: /languages/
 */
 
-define( 'CF_VERSION', '1.0.0' );
+define( 'CF_VERSION', '1.0.1' );
 define( 'CF_PLUGIN_PATH', dirname( __FILE__ ) );
 define( 'CF_INCLUDES_PATH', CF_PLUGIN_PATH . '/includes' );
 define( 'CF_PLUGIN_FOLDER', basename( CF_PLUGIN_PATH ) );

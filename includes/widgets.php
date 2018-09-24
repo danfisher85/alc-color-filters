@@ -183,7 +183,10 @@ if ( ! class_exists( 'NM_Color_Filters_Widget' ) ) {
 		}
 	}
 
-	add_action('widgets_init',
-		create_function('', 'return register_widget("NM_Color_Filters_Widget");')
-	);
+
+	function nm_register_widget() {
+		register_widget("NM_Color_Filters_Widget");
+	}
+
+	add_action( 'widgets_init', 'nm_register_widget' );
 }
