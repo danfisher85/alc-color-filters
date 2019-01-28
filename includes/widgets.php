@@ -141,7 +141,12 @@ if ( ! class_exists( 'NM_Color_Filters_Widget' ) ) {
 			$options = array( 'color_and_text' => __('Color and text', 'alc-color-filters'), 'color' => __('Color', 'alc-color-filters'), 'text' => __('Text', 'alc-color-filters') );
 					
 			foreach ( $options as $key => $value ) :
-				$selected = ( $instance[ 'layout' ] == $key ) ? 'selected' : '';
+				$selected = '';
+				if ( isset( $instance[ 'layout' ] ) ) {
+					if ( $instance[ 'layout' ] == $key ) {
+						$selected = 'selected';
+					}
+				}
 			
 				echo '<option value="'. $key .'" '. $selected .'>'. $value .'</option>' . "\r\n";
 			endforeach;
