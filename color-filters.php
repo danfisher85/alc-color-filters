@@ -14,6 +14,7 @@ if ( ! class_exists( 'NM_Color_Filters' ) ) {
 		function init() {
 			if ( ! class_exists( 'WooCommerce' ) ) {
 				add_action( 'admin_notices', array( $this, 'notice_no_woocommerce' ) );
+				add_action( 'before_woocommerce_init', array( $this, 'declare_compatibility_with_custom_order_tables' ) );
 				
 				return false;
 			}
@@ -29,6 +30,13 @@ if ( ! class_exists( 'NM_Color_Filters' ) ) {
 			add_action( 'admin_enqueue_scripts', array( $this, 'load_custom_css_js' ) );
 			add_action( 'wp_enqueue_scripts', array( $this, 'plugin_scripts' ) );
 			add_action( 'admin_footer', array( $this, 'add_colors_admin_side' ) );
+		}
+
+		// Declare compatibility with Custom Order Tables
+		function declare_compatibility_with_custom_order_tables() {
+			if ( class_exists( '\Automattic\WooCommerce\Utilities\FeaturesUtil' ) ) {
+				\Automattic\WooCommerce\Utilities\FeaturesUtil::declare_compatibility( 'custom_order_tables', __FILE__, true );
+			}
 		}
 		
 		/*
